@@ -1,6 +1,8 @@
 #!/bin/bash
 set -euo pipefail
 
+source ./config.sh
+
 json_file="bookings.json"
 
 # Function to convert a duration like "1h 30m" or "45m" to minutes
@@ -21,8 +23,7 @@ add_minutes() {
 for date in $(jq -r '.[].date' "$json_file" | sort -u); do
     echo "=== Processing date: $date ==="
 
-    # start at 08:00
-    current_time="08:00"
+    current_time="$start_bookings_at"
 
     # filter bookings for this date, maintain order
     jq -c --arg d "$date" '[.[] | select(.date == $d)] | .[]' "$json_file" | while read -r entry; do
