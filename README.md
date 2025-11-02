@@ -19,11 +19,10 @@ Please send a PR if you improved or fixed the scripts.
 * Log in to Jira
 * Go to Clockwork app
 * Extract cookies
-* Update values in [config.sh](./config.sh)
+* Provide configuration for your environment in `config.sh`. Refer to [config.tempalte.sh](./config.template.sh).
 
 ### 1. Provide Bookings
-* Write your bookings into [bookings.json](./bookings.json)
-* Format:
+* Provide your bookings in `bookings.json`:
 ```json
 [
   {
@@ -35,6 +34,7 @@ Please send a PR if you improved or fixed the scripts.
   ...
 ]
 ```
+Refer to [bookings.template.json](./bookings.template.json).
 
 ### 2. Get JWT For Clockwork
 * Run `export clockwork_jwt=$("./get-clockwork-jwt.sh")`
@@ -54,4 +54,4 @@ If you need the exact time of day for each booking, feel free to provide a PR fo
 
 
 ## How It Was Done
-These scripts are a wild mixture of reverse engineering of what the browser does when booking to Clockwork and some vibe coded scripts to make it general usable.
+These scripts are a wild mixture of reverse engineering of what the browser does when booking to Clockwork and some vibe coded scripts to make it generally usable.
