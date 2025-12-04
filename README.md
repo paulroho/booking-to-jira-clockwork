@@ -19,7 +19,7 @@ Please send a PR if you improved or fixed the scripts.
 * Log in to Jira
 * Go to Clockwork app
 * Extract cookies
-* Provide configuration for your environment in `config.sh`. Refer to [config.tempalte.sh](./config.template.sh).
+* Provide configuration for your environment in `config.sh`. Refer to [config.template.sh](./config.template.sh).
 
 ### 1. Provide Bookings
 * Provide your bookings in `bookings.json`:
